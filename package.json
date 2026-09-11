@@ -23,7 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "npm run build && node dist/scripts/server.mjs",
-    "cypress:run": "cypress run",
+    "cypress": "node scripts/run-cypress.mjs",
     "sass-watch": "sass --watch --no-source-map src/main.scss:dist/css/main.css src/challenges.scss:dist/css/challenges.css src/contact.scss:dist/css/contact.css",
     "tsc-watch": "tsc --watch"
   },
