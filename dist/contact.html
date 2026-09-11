@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicons-->
+    <link rel="icon" type="image/x-icon" href="resources/esc-favicon-ico.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="resources/esc-favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="resources/esc-favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="resources/esc-favicon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="resources/esc-favicon-512x512.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="resources/esc-apple-touch-icon.png"
+    />
+    <!-- Styling -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
+
+    <title>[Esc] Hacker Escape Rooms</title>
+    <meta property="og:title" content="[Esc] Hacker Escape Rooms" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://anteman-swe.github.io/esc-hacker-escape-rooms/dist/resources/hacker-image.png"
+    />
+    <meta
+      property="og:url"
+      content="https://anteman-swe.github.io/esc-hacker-escape-rooms/dist/"
+    />
+    <meta
+      property="og:description"
+      content="Challenge yourself and your teammates with our hacker challenges. Visit our site or our premises to see all our challenges!"
+    />
+  </head>
+  <body class="body-container">
+    <header class="header">
+      <div class="header__logo-head-cont">
+        <img
+          src="resources/esc-header-icon.png"
+          alt="ESC"
+          class="header__logo"
+          data-type="home"
+        />
+        <h1 class="header__headline">Hacker Escape Rooms</h1>
+      </div>
+      <input class="hamburgerbox" type="checkbox" id="overlay-input" />
+      <label for="overlay-input" class="hamburger-button">
+        <span></span>
+      </label>
+      <div class="navigation-dimmer"></div>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a
+              href="challenges.html?filter=online"
+              target="_self"
+              data-type="online"
+              >Play online</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="challenges.html?filter=onsite"
+              target="_self"
+              data-type="on-site"
+              >Play on-site</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="storypage.html" target="_self" data-type="story"
+              >The story</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="contact.html" target="_self" data-type="contact"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="contact">
+        <h2 class="contact__title challenges__headline">Contact Us</h2>
+        <p class="contact__subtitle information__story-text">
+          Submit your contact information in the form below
+        </p>
+        <form class="contact__form" action="#" method="post" novalidate>
+          <div class="contact__field">
+            <label for="firstName" class="contact__label">First Name</label>
+            <input
+              id="firstName"
+              name="firstName"
+              type="text"
+              class="contact__input"
+              placeholder="Ex: John"
+            />
+          </div>
+          <div class="contact__field">
+            <label for="lastName" class="contact__label">Last Name</label>
+            <input
+              id="lastName"
+              name="lastName"
+              type="text"
+              class="contact__input"
+              placeholder="Ex: Smith"
+            />
+          </div>
+          <div class="contact__field">
+            <label for="email" class="contact__label">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="contact__input"
+              placeholder="Ex: johnsmith@email.com "
+            />
+          </div>
+          <div class="contact__field contact__field--full">
+            <label for="message" class="contact__label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="contact__textarea"
+              rows="4"
+              placeholder="write something here... "
+            ></textarea>
+          </div>
+          <button type="submit" class="contact__submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="info">
+        <h5 class="info__header">[Esc] Hacker Escape Rooms</h5>
+        <p class="info__txt">
+          Quodsi haberent magnalia inter potentiam et divitias, et non illam
+          quidem haec eo spectant haec quoque vos omnino desit illud quo solo
+          felicitatis libertatisque perficiuntur.
+        </p>
+      </section>
+      <section class="site-map">
+        <h5 class="site-map__header">Site map</h5>
+        <div>
+          <ul class="site-map__list">
+            <li class="site-map__item">
+              <a href="#" class="site-map__item--link" data-type="story"
+                >The Story</a
+              >
+            </li>
+            <li class="site-map__item">
+              <a href="#" class="site-map__item--link" data-type="contact"
+                >Contact us</a
+              >
+            </li>
+            <li class="site-map__item">
+              <a
+                href="legal.html"
+                class="site-map__item--link"
+                data-type="legal"
+                >Legal</a
+              >
+            </li>
+          </ul>
+          <ul class="site-map__list">
+            <li class="site-map__item">
+              <a
+                href="challenges.html?filter=online"
+                class="site-map__item--link"
+                data-type="online"
+                >Play online</a
+              >
+            </li>
+            <li class="site-map__item">
+              <a
+                href="challenges.html?filter=onsite"
+                class="site-map__item--link"
+                data-type="on-site"
+                >Play on-site</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="site-map">
+        <h5 class="site-map__header">Follow us on</h5>
+        <ul class="site-map__list">
+          <li class="site-map__item">
+            <a href="#" class="site-map__item--link">Facebook</a>
+          </li>
+          <li class="site-map__item">
+            <a href="#" class="site-map__item--link">Instagram</a>
+          </li>
+          <li class="site-map__item">
+            <a href="#" class="site-map__item--link">Twitter</a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <script type="module" src="scripts/index.mjs"></script>
+  </body>
+</html>

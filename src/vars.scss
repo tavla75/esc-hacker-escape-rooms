@@ -1,0 +1,127 @@
+@use "sass:map";
+
+$color-red: #e3170a;
+// $color-dark-blue: #011827; Detta är den gamla färgen
+$color-dark-blue: #021928;
+$color-gray: #b6bdb5;
+$color-medium-blue: #36769d;
+$color-light-blue: #8acfe5;
+$color-white: #ffffff;
+
+$button-sizes: (
+  "large": (
+    width: 19.2rem,
+    height: 4rem,
+    fontsize: 1.5rem,
+  ),
+  "medium": (
+    width: 11.3rem,
+    height: 2.7rem,
+    fontsize: 1rem,
+  ),
+);
+
+// Responsive breakpoint
+$small-to-large: 44rem;
+
+$large-screen-limit: 80rem;
+
+$large-screen-max: 100rem;
+
+$extra-large-screen: 120rem;
+
+// Font used in all DOM
+$main-font: "Roboto";
+
+@mixin breakpoint($min-width) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin button-common {
+  margin: 0;
+  font-family: $main-font;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+@mixin button-size($btn-size) {
+  $size-map: map.get($button-sizes, $btn-size);
+  width: map.get($size-map, "width");
+  height: map.get($size-map, "height");
+  font-size: map.get($size-map, "fontsize");
+}
+
+@mixin primary($btn-size) {
+  @include button-common;
+  @include button-size($btn-size);
+  color: $color-white;
+  background-color: $color-red;
+  border: none;
+}
+
+@mixin primary-on-dark($btn-size) {
+  @include button-common;
+  @include button-size($btn-size);
+  color: $color-light-blue;
+  background: none;
+  border: 0.15rem solid $color-light-blue;
+}
+
+@mixin secondary($btn-size) {
+  @include button-common;
+  @include button-size($btn-size);
+  color: $color-dark-blue;
+  background-color: $color-light-blue;
+  border: none;
+}
+
+@mixin link-version($btn-size) {
+  @include button-common;
+  @include button-size($btn-size);
+  border: none;
+  background: none;
+  text-decoration-line: underline;
+  color: $color-medium-blue;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@mixin button-raise($shadow-color: rgba(15, 15, 15, 0.384)) {
+  transform: translateY(0);
+  box-shadow: 0 0 0.75rem 0.1rem transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: 0 0.25rem 0.5em - 0.4em $shadow-color;
+    transform: translateY(-0.2em);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.25em 0.35em -0.25em $shadow-color;
+  }
+}
+
+@keyframes tone-bg-in {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

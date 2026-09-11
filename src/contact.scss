@@ -1,0 +1,101 @@
+@use "vars";
+@use "main" as *;
+
+.contact {
+  padding: 4rem 1.5rem 6rem;
+  font-family: vars.$main-font;
+  text-align: center;
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0.5rem;
+  }
+  &__subtitle {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 2.5rem;
+  }
+  &__form {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 2rem 2.5rem 2.5rem;
+    background-color: vars.$color-white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.178);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  &__field {
+    text-align: left;
+    font-size: 1rem;
+  }
+  &__label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid vars.$color-gray;
+    font-family: inherit;
+    font-size: 1rem;
+    &:focus-visible {
+      outline: none;
+      border-color: vars.$color-medium-blue;
+      box-shadow: 0 0 0 0.1rem rgba(54, 118, 157, 0.3);
+      transform: translateY(-0.35rem);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+  }
+  &__textarea {
+    min-height: 5rem;
+    resize: vertical;
+  }
+  &__submit {
+    @include vars.secondary(medium);
+    @include vars.button-raise();
+    margin-top: 0.75rem;
+    width: 100%;
+    align-self: center;
+    font-size: 1.5rem;
+  }
+}
+@include vars.breakpoint(vars.$small-to-large) {
+  .contact {
+    padding-top: 5rem;
+    &__form {
+      max-width: 32rem;
+      padding: 2.5rem 3.5rem 3.5rem;
+    }
+    &__input,
+    &__textarea {
+      font-size: 1.05rem;
+      padding: 0.75rem 1rem;
+    }
+    &__textarea {
+      min-height: 7rem;
+    }
+  }
+}
+@include vars.breakpoint(vars.$large-screen-max) {
+  .contact {
+    padding-top: 5rem;
+    &__form {
+      max-width: 40rem;
+      padding: 3.5rem 4rem 4rem;
+    }
+    &__input,
+    &__textarea {
+      font-size: 1.15rem;
+      padding: 0.75rem 1.05rem;
+    }
+    &__textarea {
+      min-height: 7rem;
+    }
+  }
+}
