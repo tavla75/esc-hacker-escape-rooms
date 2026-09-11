@@ -21,6 +21,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node dist/scripts/server.mjs",
     "sass-watch": "sass --watch --no-source-map src/main.scss:dist/css/main.css src/challenges.scss:dist/css/challenges.css src/contact.scss:dist/css/contact.css",
     "tsc-watch": "tsc --watch"
   },
@@ -28,6 +30,7 @@
     "braces": "^3.0.3",
     "chokidar": "^4.0.3",
     "detect-libc": "^1.0.3",
+    "express": "^5.2.1",
     "fill-range": "^7.1.1",
     "immutable": "^5.1.4",
     "is-extglob": "^2.1.1",
@@ -38,10 +41,11 @@
     "picomatch": "^2.3.1",
     "readdirp": "^4.1.2",
     "source-map-js": "^1.2.1",
-    "to-regex-range": "^5.0.1",
-    "tsc": "^2.0.4"
+    "to-regex-range": "^5.0.1"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.20.2",
     "sass": "^1.93.2",
     "typescript": "^5.9.3"
   }
